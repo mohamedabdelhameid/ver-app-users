@@ -1,0 +1,17 @@
+.dark-mode .cardBody .card{
+  background-color: #000 !important;
+  color: #f6f6f6 !important;
+}
+@keyframes red-Black {
+  0%{
+    color: #000;
+  }
+  100%{
+    color: #ff0000;
+  }
+}
+.fa-map-marker-alt{
+  animation: red-Black 0.5s infinite linear alternate-reverse;
+  -webkit-animation: red-Black 0.5s infinite linear alternate-reverse;
+}
+

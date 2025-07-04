@@ -1,0 +1,298 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  padding-top: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.custom-navbar {
+  width: 100%;
+  padding: 10px 0;
+ position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: inherit;
+  transition: background 0.3s;
+ 
+   
+   
+
+ 
+  
+}
+
+.custom-navbar.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+.nav-icon {
+  font-size: 25px;
+  margin-left: 10px;
+  vertical-align: middle;
+  color: #03801c; 
+  margin: 0; /* يمنع المسافات الزائدة */
+  display: inline-flex; /* يحافظ على المحاذاة الصحيحة */
+  align-items: center;
+  transition: .3s;
+}
+.befor:hover .nav-icon{
+  color: #383838;
+}
+
+.custom-navbar.light {
+  background-color: white;
+  color: black;
+}
+
+.custom-navbar.dark .nav-links a {
+  color: white;
+}
+
+.custom-navbar.light .nav-links a {
+  color: black;
+}
+
+.logoM {
+  width: 150px;
+  height: 50px;
+}
+@media (max-width: 425px) {
+  .logoM {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.befor {
+  position: relative;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.befor::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: green;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.befor:hover::before {
+  transform: scaleX(1);
+}
+
+.befor.active {
+  color: green;
+}
+.sing{
+  border-radius: 10px;
+  
+}
+
+.sing:hover {
+  transform: scalex(1.1);
+  background-color: #2b903f88 !important;
+  transition: .5s;
+
+
+}
+.sing:hover .singg{
+color: #383838 !important;
+}
+
+@media (min-width: 1201px) {
+ .sing{
+position: relative;
+left: 30px;
+ }
+}
+
+.search-form {
+  max-width: 250px;
+  margin-left: 10%;
+}
+
+#theme_switch {
+  cursor: pointer;
+}
+
+#checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  margin-left: 5px;
+  background-color: #03e02f;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+#checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .btn-outline-success {
+  border-color: black;
+  color: black;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-icon {
+  color: green;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-toggle{
+  background-color: transparent;
+}
+.navbar-toggler{
+  outline: none;
+  border: none;
+}
+.search-toggle,
+.Toogless .navbar-toggler-icon{
+  border-style: none;
+  color: #03e02f !important;
+}
+
+@media (max-width: 991px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-form {
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .cart-icon, #theme_switch {
+    order: -1;
+    margin-right: auto;
+  }
+
+  .nav-links a {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-search-bar {
+    display: flex !important;
+    justify-content: center;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+  }
+
+  .search-form {
+    display: none !important;
+  }
+}
+.navbar-toggler-icon {
+  filter: invert(61%) sepia(63%) saturate(320%) hue-rotate(90deg);
+}
+
+
+.cart-icon.animate {
+  animation: bump 0.3s ease;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.25);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
